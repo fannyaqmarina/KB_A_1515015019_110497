@@ -1,0 +1,19 @@
+Function
+f (a, b, ...) 			memanggil fungsi
+.. [F, A, B, ...] 		memanggil fungsi 
+f 				fungsi panggilan (tanpa parameter)
+the predikat fail		fungsi yang disebut ketika fungsi tidak didefinisikan (dalam bahasa dinamis)
+f (para1, para2, ....): - .... 	definisi fungsi (predikat)
+runtime current_predicate 	memeriksa informasi pemanggil
+
+Keyword
+1. implement and end implement
+Di antara semua keyword yang ada,keyword ini adalah satu-satunya, yang ada sebagai pasangan. 
+Visual Prolog memperlakukan kode yang ditulis antara dua kata kunci tersebut sebagai kode milik satu kelas. 
+Nama kelas harus diberikan setelah menerapkan kata kunci.
+2. constants
+Kata kunci ini digunakan untuk menandai bagian dari kode yang mendefinisikan beberapa nilai 
+yang umum digunakan dalam kode program
+3. Open
+Kata kunci ini digunakan untuk memperluas visibilitas lingkup kelas. Hal ini untuk digunakan hanya setelah menerapkan kata kunci.
+
