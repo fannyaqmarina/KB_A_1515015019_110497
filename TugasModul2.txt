@@ -14,15 +14,17 @@ d. pandai_main(Kusdiar,gitar).
 e. punya(sadek,mobil),
 	warna(mobil,merah),
 	merk(mobil,BMW).
+		mobil(sadek,merah,BMW).
 f. pemain(Awan,piano),
 	asal(Awan,pontianak),
 	suku(Awan,jawa).
+	PEMAIN(awan,piano,pontianak,jawa).
 g. baik(F);-
-	sifat(penyayang,dermawan).
+	penyayang(F),Dermawan(F).
 	orang(F).
 h. pintar(D);-
-	nilai_tinggi(matematika);
-	nilai_tinggi(IPA);
-	nilai_tinggi(IPS);
+	nilai_tinggi(D,matematika);
+	nilai_tinggi(D,ipa);
+	nilai_tinggi(D,ips).
 	orang(D).
-i. pasti(_,mati).
+i. pasti(X,mati).

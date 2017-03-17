@@ -64,6 +64,6 @@ CLAUSES
   
 GOAL
    %adik (X,Y) .
-   %kakek (X,Y) .
-   %ibu (X,Y) .
+   % kakek (X,Y) .
+   % ibu (X,Y) .
    %cucu (X, Y) . 
