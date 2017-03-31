@@ -1,0 +1,21 @@
+DOMAINS   
+benda            = buku(judul, pengarang);%pada domain ini kita benda adalah buku, kuda, kapal dan buku bank
+			kuda(nama) ; kapal ;%dimana buku memiliki judul dan pengarang, kuda memiliki nama dan kapal hanya berdiri sendiri 
+			bukubank(saldo)%dan buku bank memiliki saldo
+judul, pengarang, nama = symbol  %judul, pengarang, dan nama tipe datanya adalah symbol
+saldo                = real %dan saldo tipedatanya adalah real.
+ 
+PREDICATES   
+nondeterm milik(nama,benda)%milik memiliki nama dan benda yang nantinya akan sebagai subgoals dan mencari goals yang ada.
+CLAUSES   
+milik(erwin, buku("Markesot Bertutur", "Emha Ainun Najib")). %erwin memiliki buku dimana yang kita tahu di domains tadi buku itu merupakan functor karena memiliki judul dan pengarang, judul itu adalah "Markesot Bertutur", dan pengarangnya adalah "Emha Ainun Najib" subgoals ini merupakan data objek jamak dimana sebuah clausa yang memiliki parameter nah parameter ini memiliki parameter lain di dalamnya maka ini masuk kategori data objek jamak
+milik(erwin, kuda(buraq)).%erwin juga memiliki kuda bernama buraq nah disini milik (erwin,kuda(buraq)) itu merupakan data objek jamak   
+milik(erwin, kapal).%erwin juga memiliki kapal
+milik(erwin, bukubank(1000)). %erwin memiliki buku bank di mana buku bank ini tadi juga memiliki parameter lain yang bertipe real nah yang ini juga merupakan data objek jamak
+ 
+ 
+GOAL   
+milik(erwin, Benda).%goal ini akan meminta menampilakn apa apa yang dimiliki oleh erwin. dan parameter yang ada di dalam benda benda tadi akan tampil juga
+/*jadi intinya data objek jamak adalah suatu argumen yang memiliki parameter dan parameter itu memiliki parameter lain.
+dari syntak diatas functor yang dimiliki pada data objek domain campuran jamak disini adalah buku, kuda dan buku bank karena mereka memiliki parameter lagi. 
+dan sintak ini merupakan contoh dari syntak dari data objek campuran jamak.*/
