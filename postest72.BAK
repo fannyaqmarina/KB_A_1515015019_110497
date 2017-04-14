@@ -1,0 +1,26 @@
+/*****************************************************************************
+
+		Copyright (c) 1984 - 2000 Prolog Development Center A/S
+
+ Project:  
+ FileName: CH07E02.PRO
+ Purpose: 
+ Written by: PDC
+ Modifyed by: Eugene Akimov
+ Comments: 
+******************************************************************************/
+
+domains
+  list = integer* /* or whatever type you want to use */
+
+predicates
+  length_of(list,integer) - procedure (i,o)
+
+clauses
+  length_of([], 0)./*2. target kita adalah bagaimana list itu nanti bernilai [] dan melihat hasil akhirnnya disaat L itu 0. karena list kita masih ada 1,2,3 makanya saat ini klausa ini kita pending dahulu*/
+  length_of([_|T],L):-/*3. untuk saat ini pada klausa disamping yang kita ketahui adalah head nya 1 dan T nya 2,3,[],dan L masih L*/
+	length_of(T,TailLength), /*4. dan Length_of nya saat ini (2,3,[] dan tailenght nya masih 0 karena pada klausa yang kita pending tadi L atau Tailenght itu masih bernilai 0*/
+	L = TailLength + 1. % 5. dan nilai Lenght tadi yang awalnya dia bernilai 0 pada klausa ini kita tambah satu sehingga taillenght tadi bernilai satu 
+
+goal
+  length_of([1,2,3],L)./*1. pada goals ini kita mencari nilai dari L dimana dengan list [1,2,3] untuk mencari nilai dari L ini tadi kita pergi ke klausa terlebih dahulu*/
